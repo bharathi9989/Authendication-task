@@ -56,3 +56,11 @@ export const login = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
+
+
+
+
+export const getMe = async (req, res) => {
+  const user = await User.findById(req.user.id).select("-password");
+  res.json(user);
+};
