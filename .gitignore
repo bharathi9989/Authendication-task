@@ -66,12 +66,3 @@ temp/
 *.seed
 *.pid.lock
 
-# -----------------------------
-# Optional: uploads (if using multer)
-# -----------------------------
-uploads/
-
-# -----------------------------
-# Optional: Docker
-# -----------------------------
-docker-compose.override.yml
