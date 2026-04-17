@@ -40,7 +40,10 @@ export const login = async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password);
 
     if (!isMatch)
-      return res.status(400).json({ message: "Invalid credentials" });
+      return res.status(400).json({
+        success: false,
+        message: "Invalid credentials",
+      });
 
     const token = generateToken(user);
 
@@ -56,9 +59,6 @@ export const login = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
-
-
-
 
 export const getMe = async (req, res) => {
   const user = await User.findById(req.user.id).select("-password");
