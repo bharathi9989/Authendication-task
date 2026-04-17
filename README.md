@@ -1,6 +1,6 @@
- 🔐 Authentication API (JWT Based)
+🔐 Authentication API (JWT Based)
 
- 📌 Project Overview
+📌 Project Overview
 
 This project implements User Authentication and Authorization using JWT (JSON Web Token) in a Node.js application.
 It follows the MVC architecture and provides secure endpoints for user registration, login, and protected user data access.
@@ -11,15 +11,13 @@ It follows the MVC architecture and provides secure endpoints for user registrat
 	•	Node.js
 	•	Express.js
 	•	MongoDB (Mongoose)
-	•	JWT (jsonwebtoken)
+	•	JSON Web Token (JWT)
 	•	bcryptjs
-	•	Postman (API Testing)
-
-⸻
+	•	Postman
 
 📂 Folder Structure
 
-src/
+	src/
 ├── config/        # Database connection
 ├── controllers/   # Business logic
 ├── middleware/    # Auth middleware
@@ -29,37 +27,25 @@ src/
 ├── app.js
 server.js
 
-⸻
-
 ⚙️ Installation & Setup
 
 1. Clone the repository
 
-git clone 
-
+	git clone https://github.com/bharathi9989/Authendication-task
 2. Install dependencies
-
-npm install
+   npm install
 
 3. Create .env file
 
-Add the following:
-
-PORT=2048
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
+   PORT=2048
+	MONGO_URI=mongodb+srv://ervelubharathis_db_user:Pr6mlf0PpBBAKZv3@authdb.ta2bpzq.mongodb.net/?appName=authDB
+	JWT_SECRET=guviauthendication
 
 4. Run the server
-
-npm run dev
-
-⸻
+   	npm run dev
 
 🌐 Base URL
-
-http://localhost:2048
-
-⸻
+	http://localhost:2048
 
 🔑 API Endpoints
 
@@ -68,50 +54,50 @@ http://localhost:2048
 POST /api/auth/register
 
 Request Body:
-{
-“username”: “bharathi”,
-“email”: “bharathi@guvi.com”,
-“password”: “bharathi@123”
+
+	{
+  "username": "bharathi",
+  "email": "bharathi@guvi.com",
+  "password": "bharathi@123"
 }
 
 Response:
-{
-“message”: “User registered successfully”
-}
 
-⸻
+	{
+  "message": "User registered successfully"
+}
 
 🔹 Login User
 
 POST /api/auth/login
 
 Request Body:
-{
-“email”: “bharathi@guvi.com”,
-“password”: “bharathi@123”
+
+		{
+  "email": "bharathi@guvi.com",
+  "password": "bharathi@123"
 }
 
 Response:
-{
-“token”: “JWT_TOKEN”
+	{
+  "token": "JWT_TOKEN"
 }
-
-⸻
 
 🔹 Get Current User (Protected)
 
 GET /api/auth/me
 
 Headers:
-Authorization: Bearer 
 
-Response:
-{
-“id”: “user_id”,
-“email”: “bharathi@guvi.com”
+Authorization: Bearer <token>
+
+Response:	
+
+	{
+  "id": "user_id",
+  "email": "bharathi@guvi.com"
 }
 
-⸻
 
 🔐 Authentication Flow
 	1.	User registers with email and password
@@ -124,16 +110,19 @@ Response:
 
 🧪 API Testing
 
-All APIs are tested using Postman.
-Postman collection link: 
+All APIs are tested using Postman
 
-https://documenter.getpostman.com/view/48296551/2sBXqDrhjk
+Postman Collection:
+
+link :  https://documenter.getpostman.com/view/48296551/2sBXqDrhjk
+
 
 ⸻
 
 🚀 Deployment
 
-Backend deployed on Render: 
+Backend deployed on Render:
+
 
 ⸻
 
@@ -149,3 +138,5 @@ Backend deployed on Render:
 👨‍💻 Author
 
 Velubharathi
+
+	
