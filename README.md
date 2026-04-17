@@ -17,7 +17,7 @@ It follows the MVC architecture and provides secure endpoints for user registrat
 
 📂 Folder Structure
 
-	src/
+src/
 ├── config/        # Database connection
 ├── controllers/   # Business logic
 ├── middleware/    # Auth middleware
